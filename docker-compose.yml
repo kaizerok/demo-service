@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    image: __IMAGE_NAME__:__IMAGE_TAG__
+    build:
+      context: .
+      dockerfile: cicd/Dockerfile
+      args:
+        - APP_DOMAIN
+        - CI_COMMIT_REF_NAME
